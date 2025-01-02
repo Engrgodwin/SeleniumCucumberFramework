@@ -1,0 +1,16 @@
+PageObject Package: Housing all the pages and the page elements.
+The things that will always change after the framework is built, will be page objects. It is dynamic.
+
+The Feature file: Also changes as it houses the feature to be tested.
+
+Step definition: Also dynamic as each feature file must be mapped to a step definition.
+it is the test script that is written in selenium, written in reusable code and element within the pages.
+
+Config.Properties: Also changes based on any configuration that is added e.g, url, browsers.
+
+Runner: The runner can change if you need to add tags within the runner.
+
+Utilities: Once written, might take a while before changes except you want to update any reusable code.
+houses all screenshot, logs, reusable codes and anyother utilites. anything useful to the framework.
+
+Basedriver: Doesn't change once created. except you want to retweak, that is where webdriver will be
