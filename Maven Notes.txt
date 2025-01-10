@@ -1,0 +1,84 @@
+********** What is MAVEN  ****** Gradle Java
+
+ Maven is a powerful build automation and project management tool primarily used for Java projects.
+
+ It simplifies the  process of building, managing dependencies, and deploying applications.
+
+ Maven uses an XML configuration file called  pom.xml (Project Object Model) to manage
+ 1. project configurations,
+ 2. dependencies
+ 3. build lifecycle, and plugins.
+
+ Key Features of Maven:
+
+     1. Dependency Management: Automatically downloads and manages project libraries and dependencies.
+     2. Build Lifecycle: Handles different phases of a build, such as compile, test, and package.
+     3. Project Structure: Enforces a standard directory layout for project files.
+     4. Plugins: Supports various plugins to extend its functionality, such as code compilation, testing, and packaging
+
+Download Maven.
+
+Links to Download MAVEN : https://maven.apache.org/download.cgi
+
+
+Maven Lifecycle Commands:
+1. mvn clean
+Usage: Cleans the target/ directory, removing all compiled files, JARs, or other build artifacts.
+When to use: Before running a fresh build or when cleaning up unnecessary files.
+2. mvn compile
+Usage: Compiles the source code of the project.
+When to use: After modifying code, to ensure there are no compilation errors.
+3. mvn test
+Usage: Runs unit tests in the project using the testing framework (e.g., JUnit, TestNG).
+When to use: To validate that the code changes have not broken existing functionality.
+4. mvn package
+Usage: Packages the compiled code into a distributable format, such as a JAR or WAR file.
+When to use: When you want to generate a deployable artifact of your project.
+5. mvn install
+Usage: Installs the built artifact (e.g., JAR/WAR) into the local Maven repository (~/.m2/repository).
+When to use: When you want to make the artifact available for other local projects.
+6. mvn deploy
+Usage: Deploys the artifact to a remote repository (e.g., Nexus, Artifactory).
+When to use: When you want to share the built artifact with other developers or teams.
+7. mvn validate
+Usage: Validates the project structure and checks for missing or misconfigured files.
+When to use: Before starting a build to ensure the project is correctly set up.
+8. mvn verify
+Usage: Runs integration tests and checks for the project’s readiness for deployment.
+When to use: To confirm the project meets all required conditions before packaging.
+9. mvn dependency:tree
+Usage: Displays the project's dependency hierarchy.
+When to use: To analyze and troubleshoot dependency conflicts or view transitive dependencies.
+10. mvn dependency:resolve
+Usage: Resolves and downloads project dependencies to the local repository.
+When to use: To ensure all dependencies are correctly fetched and available.
+11. mvn exec:java
+Usage: Runs a Java class in the project using the Maven Exec plugin.
+When to use: For executing standalone Java applications.
+
+***********
+To see more on each command run these commands E.G
+" mvn help:describe -Dcmd=clean"
+
+***************
+How to Use Maven:
+
+Install Maven: Ensure Maven is installed on your system by downloading it from Maven's official website and configuring the MAVEN_HOME and PATH environment variables.
+Navigate to the Project Directory: Use the command line to navigate to the project's root directory (where the pom.xml is located).
+Run Maven Commands: Execute any of the Maven commands mentioned above to build, test, or deploy your project.
+
+
+On mac open
+vi ~/.bash_profile
+
+set
+export MAVEN_HOME=/Users/yourusername/apache-maven-<version>
+export PATH=$PATH:$MAVEN_HOME/bin
+
+Run
+source ~/.zshrc
+# or
+source ~/.bash_profile
+
+check
+mvn -v

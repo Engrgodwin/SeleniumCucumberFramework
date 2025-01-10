@@ -47,7 +47,7 @@ public class LinkValidator {
 
 
                 if (statusCode >= 200 && statusCode < 400) {
-                    System.out.println("Active link: " .+ url + " [Status: " + statusCode + "]");
+                    System.out.println("Active link: " + url + " [Status: " + statusCode + "]");
                     activeLinks++;
 
                     // Click the active link

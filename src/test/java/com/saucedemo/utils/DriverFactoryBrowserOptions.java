@@ -1,11 +1,11 @@
 package com.saucedemo.utils;
 
 public class DriverFactoryBrowserOptions {
-    private static WebDriver driver;
-//
-//    // Singleton pattern for WebDriver instance
-//    public static WebDriver getDriver() {
-//        if (driver == null) {
+//   private static WebDriver driver;
+
+// // Singleton pattern for WebDriver instance
+//   public static WebDriver getDriver() {
+//      if (driver == null) {
 //            String browser = ConfigReader.getProperty("browser"); // Read browser from config
 //            switch (browser.toLowerCase()) {
 //                case "chrome":

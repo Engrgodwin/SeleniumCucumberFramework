@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
     /* On every page get all the UI elements that the webdriver can interract with and represent them as
     object in each individual page class e.g links, menu, buttons, form fills, logo.
     You can find them findelement By ID, class, Xpath
@@ -29,7 +29,7 @@ public class LoginPage {
     //Create the constructor of the page
 
     public LoginPage(WebDriver driver){
-
+        super(driver);
         this.driver = driver;
         PageFactory.initElements(driver,this);
 

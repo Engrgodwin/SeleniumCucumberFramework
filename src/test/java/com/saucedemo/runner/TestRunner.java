@@ -6,9 +6,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
         features = "src/test/resources/features",
-        glue = "steps",
+        glue = "com.saucedemo.steps",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
-        tags = "@functional OR @regression",
+        tags = "@login",
         monochrome = true
 
 )
