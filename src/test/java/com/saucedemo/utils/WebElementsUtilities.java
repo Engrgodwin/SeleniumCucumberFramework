@@ -67,6 +67,7 @@ public class WebElementsUtilities {
      * @return String text of the element
      */
     public String getText(By locator) {
+
         return waitForVisibility(locator).getText();
     }
 

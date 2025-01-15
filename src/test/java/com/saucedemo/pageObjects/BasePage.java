@@ -11,13 +11,12 @@ import java.io.File;
 import java.time.Duration;
 
 public class BasePage extends BaseDriver {
-
     protected WebDriver driver;
     private WebDriverWait wait;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver, this);
     }
 
@@ -77,7 +76,6 @@ public class BasePage extends BaseDriver {
      * @param locator By locator of the element
      */
     protected void click(By locator) {
-
         waitForClickable(locator).click();
     }
 
@@ -195,4 +193,5 @@ public class BasePage extends BaseDriver {
         click(By.id("react-burger-menu-btn")); // Open menu
         click(By.id("logout_sidebar_link"));  // Click logout
     }
+
 }
